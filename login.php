@@ -22,7 +22,7 @@ $requete->execute([':email' => $email]);
 $utilisateur = $requete->fetch();
 
 // Vérification du mot de passe
-if (!$utilisateur || !password_verify($mot_de_passe, $utilisateur['password'])) {
+if (!$utilisateur || !password_verify($mot_de_passe, $utilisateur['password']) ) {
 
     header('Location: index.php');
 
