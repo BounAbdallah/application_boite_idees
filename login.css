@@ -1,0 +1,76 @@
+body{
+    margin: 0%;
+    background: #396afc;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2948ff, #396afc);  
+    background: linear-gradient(to right, #2948ff, #396afc); 
+    display: flex;
+    justify-content: center;
+}
+
+.formulaire{
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.box-formulaire{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+.box-formulaire h2{
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: Bold;
+}
+.box-formulaire p{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: semiBold;
+}
+.titre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.mail_partie{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: #ffffff;
+    align-items: center;
+    vertical-align: middle;
+    width: 605px;
+    height: 95px;
+    margin-top: 40px;
+    border-radius: 10px;
+    border: 2px solid #F7971E;
+    font-size:18px;
+
+
+}
+.formulaire input{
+    width: 350px;
+    height: 50%;
+    border: 2px solid #396afc;
+    border-radius: 8px;
+    font-size:14px;
+
+}
+
+.formulaire .btn{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #F7971E;
+    border-radius: 10px;
+    color: #2948ff;
+    font-size:18px;
+}
+   /* fallback for old browsers */
+
+ ; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */

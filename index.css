@@ -1,0 +1,83 @@
+body{
+    margin: 0%;
+background: #1488CC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.top-bar{
+    display: flex;
+    justify-content: space-around;
+    background: #1488CC;
+    font-size: 18px;
+    color: #ffffff;
+}
+.navigation{
+   padding-top: 20px;
+    background: #ffffff;
+    width: 200px;
+    height: auto;
+}
+.ajouter a{
+   padding-left: 5px;
+   margin-top: 5%;
+    text-decoration: none;
+   color:#2B32B2;
+   font-size: 20px;
+}
+.ajouter{
+    /* border-bottom: 2px solid #2B32B2; */
+   margin-bottom: 10px;
+
+}
+.section-body{
+    display: flex;
+    justify-content: space-around;
+}
+.proposition{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: right;
+}
+.card{
+    margin-left: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 350px;
+    height: auto;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+}
+.card a{
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px;
+}
+
+.card .span{
+    width: 300px;
+    padding: 4px;
+    border: 2px solid #2B32B2;
+    /* background: #2B32B2; */
+}
+.btn-voir{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 80%;
+    height: 40px;
+    background: rgb(131, 224, 131);
+    color: #ffffff;
+    border-radius: 8px;
+    margin-left: 10%;
+}
+
+.ajouter p{
+    margin: 8px;
+    padding: 4px;
+    border: 2px solid #1488CC;
+}
