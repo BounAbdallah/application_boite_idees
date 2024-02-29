@@ -28,7 +28,7 @@ $requete->execute([
 ]);
 
 // Message de confirmation
-header('Location: accueil.php');
+header('Location: index.php');
 
 
 

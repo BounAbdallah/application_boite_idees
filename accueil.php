@@ -1,10 +1,32 @@
 <?php 
+
 session_start();
 require_once "config.php";
 
-$requete = $bdd->prepare("SELECT * FROM `utilisateurs` ");
-$requete->execute();
-$utilisateur= ":prenom.value";
+// Vérifier si l'utilisateur est connecté en vérifiant l'existence de la session
+if (!isset($_SESSION['user_id'])) {
+    // Rediriger l'utilisateur vers la page de connexion s'il n'est pas connecté
+    header('Location: index.php');
+    exit;
+}
+
+// Utiliser l'ID de l'utilisateur stocké dans la session pour récupérer ses données
+$user_id = $_SESSION['user_id'];
+$sql = "SELECT * FROM utilisateurs WHERE id = :user_id";
+$requete = $bdd->prepare($sql);
+$requete->execute([':user_id' => $user_id]);
+$utilisateur = $requete->fetch();
+
+// Maintenant, vous avez accès aux informations de l'utilisateur dans la variable $utilisateur
+// Vous pouvez les utiliser pour personnaliser la page ou afficher des informations
+
+
+
+
+
+// $requete = $bdd->prepare("SELECT * FROM `utilisateurs` ");
+// $requete->execute();
+// $utilisateur= ":prenom.value";
 
 
 
@@ -25,7 +47,7 @@ $_SESSION['utilisateur'] = $utilisateur
 <div class="top-bar">
     <div class="site-name"><h3>App Boîte á idées </h3></div>
     <?php if (isset($_SESSION['utilisateur'])) :?>
-    <div class="user-name"><h3><?php echo 'Bienvenue'.$_SESSION['utilisateur']  ?></h3></div>
+    <div class="user-name"><h3><?php echo 'Bienvenue'." ".$_SESSION['user_email']  ?></h3></div>
     <?php unset($_SESSION['utilisateur'])?>
     <?php endif;?>
 </div>

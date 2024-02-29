@@ -41,6 +41,7 @@ try {
                 <span class="span"><?php echo $row["statut"] ?></span>
                 <p><?php echo $row["description"] ?></p><br>
                 <h3>Idée de l'utilisateur nº : <span><?php echo $row["id"] ?></span> </h3>
+                <h3> Creer le  : <span><?php echo $row["date_creation"] ?></span> </h3>
             </div>
             <div class="btn">
                 <div class="btn-update">
