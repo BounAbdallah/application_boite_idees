@@ -33,10 +33,10 @@ if (!$utilisateur || !password_verify($mot_de_passe, $utilisateur['password']) )
 }
 
 // Démarrage de la session
-session_start();
+// session_start();
 
 // Stockage des informations de l'utilisateur en session
-$_SESSION['utilisateur'] = $utilisateur;
+// $_SESSION['utilisateur'] = $utilisateur;
 
 // Redirection vers la page d'accueil
 header('Location: accueil.php');

@@ -63,7 +63,7 @@ $libelle_categorie = ":libelle"
 $requete = $bdd->prepare("SELECT * FROM `idees` ");
 
 $requete->execute();
-$id = ":id_idee";
+$id = ":id";
 $statut = ":statut";
 $titre = ":titre"; 
 $description = ":description";
@@ -74,13 +74,14 @@ $categorie_id = ":categorie_id";
 <div class="proposition">
   <?php while ($row = $requete->fetch(PDO::FETCH_ASSOC)) :?>
   <div class="card">
-    <?php echo $row['itilisateur_id'];?>
+    <?php echo $row['id'];?>
+    <?php echo $row['id'];?>
       <h2><?php echo $row["titre"]; ?></h2>
       <span class="span"><?php echo $row["statut"] ?></span>
       <p><?php echo $row["description"] ?></p><br>
-      <h3>idée de l'utilisateur nº : <span><?php echo $row["categorie_id"] ?></span> </h3>
+      <h3>idée de l'utilisateur nº : <span><?php echo $row["id"] ?></span> </h3>
       <div class="btn-voir">
-        <a href="read.php">Voir</a>
+      <a href="detail_idee.php?id='. $row['id']">Voir</a>
       </div>
 </div>
 <?php endwhile?>
