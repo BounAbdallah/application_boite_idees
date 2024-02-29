@@ -4,7 +4,7 @@ require_once "config.php";
 
 $requete = $bdd->prepare("SELECT * FROM `utilisateurs` ");
 $requete->execute();
-$utilisateur= ":prenom.value";
+$utilisateur= ":email";
 
 
 
@@ -24,10 +24,9 @@ $_SESSION['utilisateur'] = $utilisateur
 
 <div class="top-bar">
     <div class="site-name"><h3>App Boîte á idées </h3></div>
-    <?php if (isset($_SESSION['utilisateur'])) :?>
-    <div class="user-name"><h3><?php echo 'Bienvenue'.$_SESSION['utilisateur']  ?></h3></div>
-    <?php unset($_SESSION['utilisateur'])?>
-    <?php endif;?>
+    <!-- <php while ($row = $requete->fetch(PDO::FETCH_ASSOC)) :?> -->
+    <!-- <div class="user-name"><h3><php echo 'Bienvenue'.$row['email']  ?></h3></div>
+    <!-- <php endwhile;?> --> -->
 </div>
 <?php
 //Inclusion du fichier de configuration bdd 
