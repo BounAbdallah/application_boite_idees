@@ -1,0 +1,42 @@
+@import url(index.css);
+
+.box-detail{
+    width: 40%;
+    height: 900px;
+    margin: 0%;
+    padding-top: 20px;
+    background: #ffffff;
+}
+
+.box-detail .card{
+    margin-left: 40px;
+}
+
+.box-detail .btn{
+    display: flex;
+    justify-content: space-around;
+
+}
+.btn .btn-update {
+    width: 200px;
+    height: 40px;
+    background : green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+.btn-delete{
+    width: 200px;
+    height: 40px;
+    background : rgb(171, 4, 34);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+.btn a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 24px;
+}

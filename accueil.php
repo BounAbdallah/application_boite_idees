@@ -75,13 +75,15 @@ $categorie_id = ":categorie_id";
   <?php while ($row = $requete->fetch(PDO::FETCH_ASSOC)) :?>
   <div class="card">
     <?php echo $row['id'];?>
-    <?php echo $row['id'];?>
+
       <h2><?php echo $row["titre"]; ?></h2>
       <span class="span"><?php echo $row["statut"] ?></span>
       <p><?php echo $row["description"] ?></p><br>
-      <h3>idée de l'utilisateur nº : <span><?php echo $row["id"] ?></span> </h3>
+      <!-- <h3>idée de l'utilisateur nº : <span><</span> </h3> -->
+      <!-- <?php echo $row["id"] ?> -->
       <div class="btn-voir">
-      <a href="detail_idee.php?id='. $row['id']">Voir</a>
+        <?php  $id = $row['id']; ?>
+      <a href="detail_idee.php?id=<?php echo $id ?>">Voir</a>
       </div>
 </div>
 <?php endwhile?>

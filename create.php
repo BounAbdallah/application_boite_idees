@@ -27,7 +27,7 @@
 <div class="form-ajouter">
 
 <h1>Ajouter une idée</h1>
-
+<div class="form-ajouter2">
 <form action="creation.php" method="post">
     <label for="titre">Titre :</label>
     <input type="text" id="titre" name="titre" value="<?= $titre ?>" required>
@@ -47,7 +47,7 @@
     <br>
     <button type="submit">Enregistrer</button>
 </form>
-
+</div>
 </div>
 </body>
 </html>
