@@ -70,7 +70,22 @@ body{
     border-radius: 10px;
     color: #2948ff;
     font-size:18px;
+}.sinscrire{
+    margin: 10px;
 }
-   /* fallback for old browsers */
-
- ; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.sinscrire{
+    margin-left: 90px;
+display: flex;
+flex-direction: row;
+font-size: 24px;
+color: #FFF;
+gap: 20px;
+}
+.sinscrire span{
+    margin-left: 20px;
+}
+.sinscrire a{
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(178, 218, 178);
+}

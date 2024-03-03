@@ -1,0 +1,70 @@
+@import url(index.css);
+body{
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.form-ajouter form{
+    margin-top: -60px;
+
+    margin-left: 90px;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 22px;
+}
+.form-ajouter input{
+    width: 80%;
+    height: 30px;
+    border-radius: 20px 10px 20px 10px ;
+    font-size: 26px;
+    border: 2px solid #6190E8;
+}
+.form-ajouter select,textarea{
+    width: 80%;
+    height: 30px;
+    border-radius:10px;
+    border-radius: 20px 10px 20px 10px ;
+    font-size: 20px;
+    border: 2px solid #6190E8;
+}
+.form-ajouter{
+    margin-top: -60px;
+    margin-left: -30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 600px;
+    margin-top: 20px;
+    background: rgb(181, 225, 181);
+    border-radius: 74% 26% 55% 45% / 41% 49% 51% 59%  ;
+}
+
+.form-ajouter2{
+    display: flex;
+    margin-left: 50px;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 500px;
+    height: 450px;
+    margin-top: 20px;
+    background: rgb(119, 169, 119);
+    border-radius: 74% 26% 55% 45% / 41% 49% 51% 59%  ;
+}
+.form-ajouter button{
+    width: 80%;
+    height: 40px;
+    font-size: 24px;
+    border-radius: 20px 10px 20px 10px ;
+    border: 2px solid #6190E8;
+
+}
+.form-ajouter h1{
+    margin-left: 30px;
+}

@@ -1,4 +1,5 @@
 <?php
+
 $host = "localhost";
 $dbname = "application_boite_idees";
 $username = "root";
