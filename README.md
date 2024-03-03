@@ -19,7 +19,12 @@ Ce projet est une application web permettant aux utilisateurs de proposer, modif
 4. Assurez-vous que votre environnement PHP est configuré avec PHP version 8.2.9 ou supérieure et MySQL version 8.3.0.
 
 ## Captures d'écran
-(--\/\/\/\/\/\/--)
+
+![Demo de l'application ](img/demo.png)
+
+[Lien de la video](https://www.youtube.com/watch?v=2lrfmXo8PHc)
+
+
 
 ## Comment utiliser
 1. Accédez à l'application depuis votre navigateur web.
