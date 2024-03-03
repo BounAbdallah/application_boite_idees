@@ -40,3 +40,10 @@
     color: #ffffff;
     font-size: 24px;
 }
+.box-detail p a{
+    text-decoration: none;
+    color: blue;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+}

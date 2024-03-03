@@ -28,4 +28,5 @@ if (!$utilisateur || !password_verify($mot_de_passe, $utilisateur['password'])) 
     $_SESSION['user_email'] = $utilisateur['email']; // Stockage de l'email de l'utilisateur dans la session
     header('Location: accueil.php');
     exit;
-}
+};
+

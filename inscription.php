@@ -10,7 +10,7 @@ $password = $_POST['password'];
 
 // Validation des données (à améliorer)
 if (empty($nom) || empty($email) || empty($password)) {
-    echo "Tous les champs sont obligatoires.";
+    header('Location: sinscrire.php');
     exit;
 }
 

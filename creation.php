@@ -8,7 +8,7 @@ $titre = "";
 $description = "";
 $categorie_id = "";
 $errors = []; 
-
+$libelle = "";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -17,13 +17,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $description = trim($_POST['description']);
     $categorie_id = (int) $_POST['categorie_id']; 
 
-
     if (empty($errors)) {
         header('Location: create.php');
-
     }
         try {
-            $requete = $bdd->prepare("INSERT INTO `idees` (titre, description, categorie_id) VALUES (:titre, :description, :categorie_id)"); // Added id_utilisateur column
+            $requete = $bdd->prepare("INSERT INTO `idees` (titre, description, categorie_id) VALUES (:titre, :description, :categorie_id)"); 
             $requete->execute([
                 ':titre' => $titre,
                 ':description' => $description,
@@ -37,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
 
-
+// Retrieve category options
 $requete = $bdd->prepare("SELECT * FROM `categories` ");
 $requete->execute();
 $categories = $requete->fetchAll(PDO::FETCH_ASSOC);

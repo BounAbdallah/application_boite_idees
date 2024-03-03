@@ -1,5 +1,28 @@
 <?php
+session_start();
 require_once "config.php";
+
+// Vérifier si l'utilisateur est connecté en vérifiant l'existence de la session
+if (!isset($_SESSION['user_id'])) {
+    // Rediriger l'utilisateur vers la page de connexion s'il n'est pas connecté
+    header('Location: index.php');
+    exit;
+}
+
+
+$user_id = $_SESSION['user_id'];
+$sql = "SELECT * FROM utilisateurs WHERE id = :user_id";
+$requete = $bdd->prepare($sql);
+$requete->execute([':user_id' => $user_id]);
+$utilisateur = $requete->fetch();
+
+
+
+$_SESSION['utilisateur'] = $utilisateur;
+
+
+
+
 
 // Récupérer l'ID de l'idée à afficher depuis l'URL
 $id = isset($_GET['id']) ? $_GET['id'] : null;
@@ -36,19 +59,19 @@ try {
         <body>
             <div class="box-detail">
             <h2>Détails de l'idée</h2>
+            <p><a href="accueil.php"> RETOUR </a></p>
             <div class="card">
                 <h2><?php echo $row["titre"]; ?></h2>
                 <span class="span"><?php echo $row["statut"] ?></span>
                 <p><?php echo $row["description"] ?></p><br>
                 <h3>Idée de l'utilisateur nº : <span><?php echo $row["id"] ?></span> </h3>
-                <h3> Creer le  : <span><?php echo $row["date_creation"] ?></span> </h3>
             </div>
             <div class="btn">
                 <div class="btn-update">
                 <a href="update.php?id=<?php echo $id ?>">Modifier</a>
                 </div>
                 <div class="btn-delete">
-            <a action ="accueil.php" href="delete.php?id=<?php echo $id ?>">Supprimer</a>
+            <a href="delete.php?id=<?php echo $id ?>">Supprimer</a>
 
                 </div>            </div>
         </div>
@@ -59,4 +82,5 @@ try {
 } catch (PDOException $e) {
     echo "Erreur : " . $e->getMessage();
 }
+
 ?>

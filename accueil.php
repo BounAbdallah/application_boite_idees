@@ -10,27 +10,18 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
-// Utiliser l'ID de l'utilisateur stocké dans la session pour récupérer ses données
+
 $user_id = $_SESSION['user_id'];
 $sql = "SELECT * FROM utilisateurs WHERE id = :user_id";
 $requete = $bdd->prepare($sql);
 $requete->execute([':user_id' => $user_id]);
 $utilisateur = $requete->fetch();
 
-// Maintenant, vous avez accès aux informations de l'utilisateur dans la variable $utilisateur
-// Vous pouvez les utiliser pour personnaliser la page ou afficher des informations
 
 
+$_SESSION['utilisateur'] = $utilisateur;
 
 
-
-// $requete = $bdd->prepare("SELECT * FROM `utilisateurs` ");
-// $requete->execute();
-// $utilisateur= ":prenom.value";
-
-
-
-$_SESSION['utilisateur'] = $utilisateur
 
 ?>
 <!DOCTYPE html>
@@ -46,15 +37,17 @@ $_SESSION['utilisateur'] = $utilisateur
 
 <div class="top-bar">
     <div class="site-name"><h3>App Boîte á idées </h3></div>
-    <?php if (isset($_SESSION['utilisateur'])) :?>
-    <div class="user-name"><h3><?php echo 'Bienvenue'." ".$_SESSION['user_email']  ?></h3></div>
+    <?php if(isset( $_SESSION['user_id']) === isset($utilisateur['id'])) :?>
+    <div class="user-name"><h3><?php echo 'Bienvenue'." ".$utilisateur['nom']  ?></h3> <div class="deconnexion"><span><a href="deconnexion.php">Se deconnecter</a></span></div>  </div>
     <?php unset($_SESSION['utilisateur'])?>
     <?php endif;?>
 </div>
-<?php
-//Inclusion du fichier de configuration bdd 
 
-// Recuperation des elements de la table 
+
+<?php
+
+
+
 
 
 ?>
@@ -62,7 +55,7 @@ $_SESSION['utilisateur'] = $utilisateur
 <?php 
 $requete = $bdd->prepare("SELECT * FROM `categories` ");
 $requete->execute();
-$libelle_categorie = ":libelle"
+$libelle_categorie = ":libelle";
 
 
 ?>
@@ -74,10 +67,15 @@ $libelle_categorie = ":libelle"
            <p><a href="create.php">Ajouter une idée !</a></p>
         </div>
         <div class="ajouter">
-  <?php while ($row = $requete->fetch(PDO::FETCH_ASSOC)) :?>
+       <?php while ($row = $requete->fetch(PDO::FETCH_ASSOC)) :?>
             <p><?php echo $row['libelle'] ?></p>
-<?php endwhile?>
+        <?php endwhile?>
 
+        </div>
+        <div class="add-categories">
+        <div class="ajouter">
+           <p><a href="ajout_categori.php">Ajouter une categorie !</a></p>
+        </div>
         </div>
     </div>
     

@@ -3,6 +3,9 @@ body{
 background: #1488CC;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+display: flex;
+justify-content: center;
+flex-direction: column;
 }
 
 .top-bar{
@@ -17,6 +20,8 @@ background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, F
     background: #ffffff;
     width: 200px;
     height: auto;
+    position: fixed-left;
+    /* margin-left: -270px; */
 }
 .ajouter a{
    padding-left: 5px;
@@ -50,6 +55,7 @@ background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, F
     background: #ffffff;
     border-radius: 8px;
     padding: 15px;
+    filter:drop-shadow(1px 2px  12px white) ;
 }
 .card a{
     text-decoration: none;
